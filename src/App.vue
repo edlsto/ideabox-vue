@@ -1,14 +1,41 @@
 <template>
-  <div>
-    <header>Ed's ideas</header>
-    <body>
-      <p>Welcome to my ideas site!</p>
-    </body>
+  <div class="container-inner">
+    <h1 class="title">My ideas</h1>
+    <h2>Welcome to my ideas site!</h2>
+    <Form />
   </div>
 </template>
 
 <script>
-export default {};
+import Form from "./components/Form";
+export default {
+  components: {
+    Form
+  },
+  name: "app",
+  data() {
+    return {
+      items: []
+    };
+  }
+};
 </script>
 
-<style></style>
+<style>
+.title {
+  font-family: "Bellota", cursive;
+  font-size: 5em;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.container-inner {
+  width: 50%;
+  margin: 0 auto;
+}
+</style>
